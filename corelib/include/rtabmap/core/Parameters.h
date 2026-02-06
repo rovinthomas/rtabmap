@@ -392,7 +392,7 @@ class RTABMAP_CORE_EXPORT Parameters
     RTABMAP_PARAM(RGBD, NeighborLinkRefining,         bool, false,  uFormat("When a new node is added to the graph, the transformation of its neighbor link to the previous node is refined using registration approach selected (%s).", kRegStrategy().c_str()));
     RTABMAP_PARAM(RGBD, LoopClosureIdentityGuess,     bool, false,  uFormat("Use Identity matrix as guess when computing loop closure transform, otherwise no guess is used, thus assuming that registration strategy selected (%s) can deal with transformation estimation without guess.", kRegStrategy().c_str()));
     RTABMAP_PARAM(RGBD, LoopClosureReextractFeatures, bool, false,  "Extract features even if there are some already in the nodes. Raw features are not saved in database.");
-    RTABMAP_PARAM(RGBD, LocalBundleOnLoopClosure,     bool, true,  "Do local bundle adjustment with neighborhood of the loop closure.");
+    RTABMAP_PARAM(RGBD, LocalBundleOnLoopClosure,     bool, false,  "Do local bundle adjustment with neighborhood of the loop closure.");
     RTABMAP_PARAM(RGBD, InvertedReg,                  bool, false,  "On loop closure, do registration from the target to reference instead of reference to target.");
     RTABMAP_PARAM(RGBD, CreateOccupancyGrid,          bool, false,  "Create local occupancy grid maps. See \"Grid\" group for parameters.");
     RTABMAP_PARAM(RGBD, MarkerDetection,              bool, false,  "Detect static markers to be added as landmarks for graph optimization. If input data have already landmarks, this will be ignored. See \"Marker\" group for parameters.");
